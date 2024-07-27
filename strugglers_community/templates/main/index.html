@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Community Space{% endblock %}
+
+{% block content %}
+<h1>Welcome to Strugglers Community</h1>
+<p>Explore forums, threads, and posts, and engage with our community.</p>
+<a href="{% url 'main:forum_list' %}" class="btn btn-primary">Browse Forums</a>
+
+
+{% if user.is_authenticated %}
+    {% for forum in forums %}
+        <a href="{% url 'main:create_thread' forum_id=forum.id %}" class="btn btn-secondary">Create a New Thread in {{ forum.title }}</a>
+    {% endfor %}
+{% endif %}
+{% endblock %}

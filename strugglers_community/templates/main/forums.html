@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Forum List</h1>
+<ul>
+    {% for forum in forums %}
+    <li>
+        <h2>{{ forum.title }}</h2>
+        <p>{{ forum.description }}</p>
+        <a href="{% url 'main:thread_list' forum_id=forum.id %}" class="btn btn-secondary">View Threads</a>
+        <a href="{% url 'main:create_thread' forum_id=forum.id %}" class="btn btn-primary">Create a New Thread</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

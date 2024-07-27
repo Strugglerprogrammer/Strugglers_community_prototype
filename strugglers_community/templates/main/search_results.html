@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<h1>Search Results for "{{ query }}"</h1>
+
+<h2>Threads</h2>
+<ul class="list-group">
+    {% for thread in threads %}
+        <li class="list-group-item"><a href="{% url 'main:post_list' thread_id=thread.id %}">{{ thread.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Posts</h2>
+<ul class="list-group">
+    {% for post in posts %}
+        <li class="list-group-item">{{ post.created_by }}: {{ post.content }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
