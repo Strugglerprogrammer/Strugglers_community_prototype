@@ -4,8 +4,8 @@
 
 <h2>AN INITIATIVE FOR STRUGGLERS AND HUSTLERS.</h2>
 
-![sc logo](https://github.com/user-attachments/assets/fe6a4df1-6d0a-4d25-b54a-b978fd7305ba)
 
+![strugglers community logo](https://github.com/user-attachments/assets/082c5410-f659-4019-be60-ac2f6824e43a)
 
 
 <author>FEARLESS</author>
